@@ -12,20 +12,21 @@ public class Board {
                     board[i][2] + " | "
             );
         }
+        System.out.println("\n");
     }
 
     boolean winCheck() {
-        if // Row checks first
-        (board[0][0] == board[0][1] && board[0][0] == board[0][2] ||
-                board[1][0] == board[1][1] && board[1][0] == board[1][2] ||
-                board[2][0] == board[2][1] && board[2][0] == board[2][2] ||
+        if      // Row checks first
+                (board[0][0] == board[0][1] && board[0][0] == board[0][2] ||
+                 board[1][0] == board[1][1] && board[1][0] == board[1][2] ||
+                 board[2][0] == board[2][1] && board[2][0] == board[2][2] ||
                 // Column checks second
-                board[0][0] == board[1][0] && board[0][0] == board[2][0] ||
-                board[0][1] == board[1][1] && board[0][1] == board[2][1] ||
-                board[0][2] == board[1][2] && board[0][2] == board[2][2] ||
+                 board[0][0] == board[1][0] && board[0][0] == board[2][0] ||
+                 board[0][1] == board[1][1] && board[0][1] == board[2][1] ||
+                 board[0][2] == board[1][2] && board[0][2] == board[2][2] ||
                 // Diagonal checks third
-                board[0][0] == board[1][1] && board[0][0] == board[2][2] ||
-                board[2][0] == board[1][1] && board[2][0] == board[0][2]) {
+                 board[0][0] == board[1][1] && board[0][0] == board[2][2] ||
+                 board[2][0] == board[1][1] && board[2][0] == board[0][2]) {
             return true;
         }
         return false;

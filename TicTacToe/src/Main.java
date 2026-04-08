@@ -1,7 +1,7 @@
 public class Main {
     public static void main(String[] args) {
-        Board tictactoe = new Board();
+        Game tictactoe = new Game();
 
-        tictactoe.printBoard();
+        tictactoe.startGame();
     }
 }
