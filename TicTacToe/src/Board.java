@@ -54,6 +54,6 @@ public class Board {
 
         int row = temp / 3;
         int col = temp % 3;
-        board[row][col] = playerChar;
+        board[row][col] = playerChar; // Player inserts 'X' or 'O' (depends on player) inside the cell
     }
 }
