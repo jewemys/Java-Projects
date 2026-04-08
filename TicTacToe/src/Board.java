@@ -30,4 +30,30 @@ public class Board {
         }
         return false;
     }
+
+    boolean validateMove(char numInputChar) {
+        // Working with char data type so use char data not direct integers
+        if (numInputChar < '0' || numInputChar > '8') {
+            return false; // INVALID MOVE
+        }
+
+        for (char[] row: board) {
+            for (char cell: row) {
+                if (cell == numInputChar) {
+                    return true; // VALID MOVE
+                }
+            }
+        }
+        return false;
+    }
+
+    void placeMove(char numInputChar, char playerChar) {
+        /* playerChar is either an 'X' or an 'O'
+            and we convert our numInputChar into an integer for mathematical operations */
+        int temp = numInputChar - '0';
+
+        int row = temp / 3;
+        int col = temp % 3;
+        board[row][col] = playerChar;
+    }
 }
